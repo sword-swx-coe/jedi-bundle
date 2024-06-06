@@ -19,7 +19,7 @@ module use /glade/work/epicufsrt/contrib/spack-stack/derecho/spack-stack-1.6.0/e
 module load stack-gcc/12.2.0
 module load stack-cray-mpich/8.1.25
 module load stack-python/3.10.13
-module load jedi-base-env
+module load jedi-mpas-env
 
 limit stacksize unlimited
 setenv F_UFMTENDIAN 'big_endian:101-200'
