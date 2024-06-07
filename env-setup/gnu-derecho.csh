@@ -20,6 +20,7 @@ module load stack-gcc/12.2.0
 module load stack-cray-mpich/8.1.25
 module load stack-python/3.10.13
 module load jedi-mpas-env
+module load nccmp
 
 limit stacksize unlimited
 setenv F_UFMTENDIAN 'big_endian:101-200'

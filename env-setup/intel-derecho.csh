@@ -24,6 +24,7 @@ module load stack-intel/2021.10.0
 module load stack-cray-mpich/8.1.25
 module load stack-python/3.10.13
 module load jedi-base-env
+module load nccmp
 module list
 
 limit stacksize unlimited
