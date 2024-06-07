@@ -57,6 +57,7 @@ if(BUILD_IODA_CONVERTERS)
   ecbuild_bundle( PROJECT iodaconv GIT "https://github.com/jcsda/ioda-converters.git" BRANCH develop UPDATE )
 endif()
 
+#ecbuild_bundle( PROJECT fms         GIT "https://github.com/jcsda/FMS.git"       BRANCH release-stable UPDATE )
 #ecbuild_bundle( PROJECT fv3         GIT "https://github.com/jcsda/GFDL_atmos_cubed_sphere.git"       BRANCH release-stable UPDATE )
 #ecbuild_bundle( PROJECT femps       GIT "https://github.com/jcsda/femps.git"                         BRANCH develop UPDATE )
 #ecbuild_bundle( PROJECT fv3-jedi-lm GIT "https://github.com/jcsda/fv3-jedi-linearmodel.git"          BRANCH develop UPDATE )
