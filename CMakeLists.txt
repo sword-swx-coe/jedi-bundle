@@ -95,6 +95,9 @@ endif()
 #ecbuild_bundle( PROJECT mpas-jedi-data GIT "https://github.com/jcsda-internal/mpas-jedi-data.git" BRANCH develop UPDATE )
 #ecbuild_bundle( PROJECT mpas-jedi      GIT "https://github.com/jcsda/mpas-jedi.git"      BRANCH develop UPDATE )
 
+# CAM repos
+ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH feature/VariableChange )
+
 #ecbuild_bundle( PROJECT coupling   GIT "https://github.com/jcsda/coupling.git"           BRANCH develop UPDATE )
 
 ecbuild_bundle_finalize()
