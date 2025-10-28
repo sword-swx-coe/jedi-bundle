@@ -12,6 +12,7 @@ git_branches_as_of_*
 
 # Ignore the contents of these directories
 build*/
+cam-jedi/
 
 # ECMWF libraries
 atlas/
