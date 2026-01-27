@@ -96,7 +96,9 @@ endif()
 #ecbuild_bundle( PROJECT mpas-jedi      GIT "https://github.com/jcsda/mpas-jedi.git"      BRANCH develop UPDATE )
 
 # CAM repos
-ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH develop )
+option(ENABLE_CAMJEDI_DATA "Obtain cam-jedi test data from camjedi-data repository (vs tarball)" ON)
+ecbuild_bundle( PROJECT camjedi-data GIT "s3://camjedi-data/camjedi-data.git"  BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH feature/camjedi_data )
 
 #ecbuild_bundle( PROJECT coupling   GIT "https://github.com/jcsda/coupling.git"           BRANCH develop UPDATE )
 
