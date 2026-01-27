@@ -96,23 +96,9 @@ endif()
 #ecbuild_bundle( PROJECT mpas-jedi      GIT "https://github.com/jcsda/mpas-jedi.git"      BRANCH develop UPDATE )
 
 # CAM-JEDI test data; repo needs to be initializes with git-lfs-s3 if it does not exist
+include( lfs_s3 )
 option(ENABLE_CAMJEDI_DATA "Obtain cam-jedi test data from camjedi-data repository" ON)
-if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/camjedi-data")
-  execute_process(
-    COMMAND git clone s3://camjedi-data/camjedi-data
-    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
-    ERROR_QUIET
-    )
-  execute_process(
-    COMMAND git-lfs-s3 install
-    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/camjedi-data"
-    )
-  execute_process(
-    COMMAND git reset --hard master
-    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/camjedi-data"
-    )
-endif()
-
+init_lfs_s3("camjedi-data/camjedi-data" "camjedi-data" "master")
 ecbuild_bundle( PROJECT camjedi-data GIT "s3://camjedi-data/camjedi-data.git"  BRANCH develop UPDATE )
 
 # CAM-JEDI model interface
