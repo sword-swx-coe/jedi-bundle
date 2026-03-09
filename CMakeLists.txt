@@ -104,7 +104,7 @@ init_lfs_s3("camjedi-data/camjedi-data" "camjedi-data" "master")
 ecbuild_bundle( PROJECT camjedi-data GIT "s3://camjedi-data/camjedi-data.git"  BRANCH develop UPDATE )
 
 # CAM-JEDI model interface
-ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/sword-swx-coe/cam-jedi.git" BRANCH feature/camjedi_data )
+ecbuild_bundle( PROJECT cam-jedi   GIT "https://github.com/jcsda-internal/cam-jedi.git" BRANCH develop )
 
 #ecbuild_bundle( PROJECT coupling   GIT "https://github.com/jcsda/coupling.git"           BRANCH develop UPDATE )
 
